@@ -1,0 +1,45 @@
+name:                performance-story
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/performance-story#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2017 Author name here
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+
+executable ioref-loop
+  hs-source-dirs:      src
+  main-is:             IORefLoop.hs
+  ghc-options:         -O2
+  build-depends: base
+  default-language:    Haskell2010
+
+executable mutable-byte-buffer-loop
+  hs-source-dirs:      src
+  main-is:             MutableByteBufferLoop.hs
+  ghc-options:         -O2
+  build-depends: base
+               , primitive
+  default-language:    Haskell2010
+
+executable ptr-loop
+  hs-source-dirs:      src
+  main-is:             PtrLoop.hs
+  ghc-options:         -O2
+  build-depends: base
+  default-language:    Haskell2010
+
+executable vector-loop
+  hs-source-dirs:      src
+  main-is:             VectorLoop.hs
+  ghc-options:         -O2
+  build-depends: base
+               , vector
+  default-language:    Haskell2010
